@@ -1,9 +1,10 @@
 body {
     margin: 0;
-    padding: 0;
     font-family: 'Helvetica', sans-serif;
     background-color: #000000;
     color: #f0f0f0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 h1, h2 {
@@ -22,7 +23,7 @@ a {
 .navbar {
     background-color: rgba(31, 31, 31, 0.0);
     padding: 15px;
-    margin-top: 10px;
+    margin-top: 20px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -34,7 +35,7 @@ a {
 }
 
 .logo {
-    font-size: 20px; /* Schriftgröße für das Logo */
+    font-size: 23px; /* Schriftgröße für das Logo */
     color: #f0f0f0; /* Farbe für das Logo */
     margin-left: 2vw; /* Dynamischer Abstand zum linken Rand */
     padding: 0.5vh 1vw; /* Dynamisches Padding für das Logo */
@@ -52,29 +53,60 @@ a {
 }
 
 .navbar ul li {
-    margin: 0 20px;
+    margin: 0 30px;
 }
 
 .navbar ul li a {
     color: #f0f0f0;
-    font-size: 14px;
+    font-size: 16px;
     transition: color 0.3s;
 }
 
 .navbar ul li a:hover {
-    color: #ff2fdc;
+    color: #ff2a2a;
 }
 
 .main-content {
-    padding: 80px 20px;
+    position: absolute; /* Absolute Positionierung für den Hauptinhalt */
+    top: 50%; /* 50% von oben */
+    left: 9%; /* Abstand zum linken Rand */
+    transform: translateY(-50%); /* Zentriere den Inhalt vertikal */
+    padding: 80px;
+    color: #f0f0f0;
 }
 
 header {
     margin-bottom: 20px;
 }
 
+#about{
+    font-size: 14px;
+}
+#about p {
+    max-width: 600px; /* Begrenzte Breite für Text, damit er umgebrochen wird */
+    line-height: 1.6; /* Zeilenabstand für bessere Lesbarkeit */
+}
+
 section {
     margin-bottom: 40px;
+}
+
+#myName {
+    font-size: 50px;
+    color: #f0f0f0;
+    margin-bottom: -20px;
+}
+
+#role {
+    font-size: 32.5px;
+    color: #ff2a2a;
+    margin-bottom: 0px;
+}
+
+#location {
+    font-size: 15px;
+    color: #f0f0f0;
+    font-weight: bold;
 }
 
 #videoBackground {
@@ -84,9 +116,11 @@ section {
     left: 0;
     height: inherit;
     z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
     -webkit-filter: blur(30px);
     -o-filter: blur(15px);
-    filter: blur(12px) brightness(30%);
+    filter: blur(12px) brightness(20%);
     object-fit: cover;
     transform: scale(1.06); /* Hide edge blur */
 }
@@ -103,7 +137,7 @@ section {
     }
 
     .navbar ul li {
-        margin: 0 10px;
+        margin: 0 30px;
     }
 
     .main-content {

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meine Portfolio Startseite</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            window.scrollTo(0, 0); // Seite ganz nach oben scrollen
+        }
+    </script>
 </head>
 <body>
     <!-- Navigation Menü -->
@@ -21,13 +26,13 @@
     <!-- Hauptinhalt -->
     <div class="main-content">
         <header>
-            <h1>Chris Dietrich</h1>
-            <h2>GRAPHIC DESIGNER</h2>
-            <p>BASED IN MUNICH, GERMANY </p>
+            <h1 id="myName">Chris Dietrich</h1>
+            <h2 id="role">GRAPHIC DESIGNER</h2>
+            <p id="location">BASED IN MUNICH, GERMANY </p>
         </header>
 
         <section id="about">
-            <p>Ich bin ein begeisterter Entwickler und Designer mit Fokus auf moderne Webtechnologien und User Experience.</p>
+            <p>Multidisciplinary freelance graphic designer, blending creativity with expertise across various mediums to deliver visually compelling solutions since 2015.</p>
         </section>
     </div>
     <div id="container"></div>
