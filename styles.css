@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #000000;
+    color: #f0f0f0;
+}
+
+h1, h2 {
+    color: #e0e0e0;
+}
+
+p {
+    color: #b0b0b0;
+}
+
+a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.navbar {
+    background-color: rgba(31, 31, 31, 0.0);
+    padding: 15px;
+    margin-top: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex; /* Flexbox für die Navbar aktivieren */
+    justify-content: space-between; /* Platz zwischen Logo und Menü schaffen */
+    align-items: center; /* Vertikal in der Mitte halten */
+}
+
+.logo {
+    font-size: 20px; /* Schriftgröße für das Logo */
+    color: #f0f0f0; /* Farbe für das Logo */
+    margin-left: 2vw; /* Dynamischer Abstand zum linken Rand */
+    padding: 0.5vh 1vw; /* Dynamisches Padding für das Logo */
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding-right: 5vw; /* Dynamisches Padding basierend auf der Fensterbreite */
+    display: flex;
+    justify-content: flex-end; /* Optionen nach rechts ausrichten */
+    align-items: center; /* Vertikal in der Mitte halten */
+    flex-wrap: nowrap; /* Verhindert, dass die Optionen in die nächste Zeile umbrechen */
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: #f0f0f0;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ff2fdc;
+}
+
+.main-content {
+    padding: 80px 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+#videoBackground {
+    width: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    z-index: -1;
+    -webkit-filter: blur(30px);
+    -o-filter: blur(15px);
+    filter: blur(12px) brightness(30%);
+    object-fit: cover;
+    transform: scale(1.06); /* Hide edge blur */
+}
+#container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .navbar ul {
+        padding-right: 5vw;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    .main-content {
+        padding: 100px 10px;
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video {
+        width: auto;
+        height: 100%;
+    }
+}
