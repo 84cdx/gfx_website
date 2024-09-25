@@ -1,10 +1,23 @@
 body {
     margin: 0;
+    height: 100%;
     font-family: 'Helvetica', sans-serif;
     background-color: #000000;
     color: #f0f0f0;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+html {
+    overflow-x: hidden;
+    height: 100%; /* Stellt sicher, dass html die volle Höhe hat */
+}
+
+.content-wrapper {
+    overflow-x: hidden;
+    height: 100%; /* Nimmt die volle Höhe des Viewports ein */
+    overflow-y: auto; /* Erlaubt das Scrollen innerhalb des Wrappers */
+    box-sizing: content-box; /* Padding nicht in der Gesamtbreite berücksichtigen */
 }
 
 h1,
@@ -26,7 +39,7 @@ a {
     background-color: transparent;
     padding: 15px;
     margin-top: 20px;
-    position: relative;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -78,7 +91,7 @@ a {
 }
 
 .icon-section {
-    position: absolute;
+    position: fixed;
     bottom: 5%;
     right: 5%;
     transform: translateY(-50%);
@@ -193,31 +206,5 @@ section {
 
     100% {
         opacity: 1;
-    }
-}
-
-@media (min-aspect-ratio: 16/9) {
-    .navbar ul {
-        padding-right: 5vw;
-    }
-
-    .navbar ul li {
-        margin: 0 30px;
-    }
-
-    .main-content {
-        padding: 100px 10px;
-    }
-
-    .video {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-aspect-ratio: 16/9) {
-    .video {
-        width: auto;
-        height: 100%;
     }
 }
