@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var grid = document.querySelector('.projects-grid');
+
+    imagesLoaded(grid, function () {
+        var msnry = new Masonry(grid, {
+            itemSelector: '.project-item',
+            columnWidth: '.project-item',
+            percentPosition: true,
+            gutter: 10
+        });
+    });
+});
 window.onload = function () {
     window.scrollTo(0, 0);
 }
