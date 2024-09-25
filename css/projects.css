@@ -28,6 +28,7 @@ a {
 .logo {
     font-size: 20px;
     color: #ff2a2a;
+    font-weight: bold;
     margin-left: 2vw;
     padding: 0.5vh 1vw;
 }
@@ -57,12 +58,12 @@ a {
 }
 
 .projects-grid {
-    columns: 3;
     gap: clamp(5px, 2vw, 5px);
-    padding: clamp(5px, 4vw, 40px);
     max-width: 90vw;
-    margin: 10px auto 0 auto;
+    width: 100%;
+    margin: 50px auto 0 auto;
     box-sizing: border-box;
+    display: block;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -75,8 +76,10 @@ a {
 
 .project-item {
     position: relative;
+    width: calc(33.333% - 5px);
     overflow: hidden;
     margin-bottom: 5px;
+    margin-right: -5px;
 }
 
 .project-item img {
@@ -88,7 +91,7 @@ a {
 }
 
 .project-item img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .back-to-top {
@@ -131,21 +134,5 @@ a {
 
     .navbar ul li {
         margin: 0 30px;
-    }
-
-    .main-content {
-        padding: 100px 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
     }
 }

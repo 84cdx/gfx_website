@@ -40,6 +40,7 @@ a {
     font-size: 20px;
     color: #ff2a2a;
     margin-left: 2vw;
+    font-weight: bold;
     padding: 0.5vh 1vw;
 }
 
@@ -139,7 +140,7 @@ section {
 }
 
 #myName {
-    font-size: 75px;
+    font-size: 90px;
     color: #f0f0f0;
     margin-bottom: -35px;
 }
