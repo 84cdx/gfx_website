@@ -10,14 +10,18 @@ body {
 
 html {
     overflow-x: hidden;
-    height: 100%; /* Stellt sicher, dass html die volle Höhe hat */
+    height: 100%;
+    /* Stellt sicher, dass html die volle Höhe hat */
 }
 
 .content-wrapper {
     overflow-x: hidden;
-    height: 100%; /* Nimmt die volle Höhe des Viewports ein */
-    overflow-y: auto; /* Erlaubt das Scrollen innerhalb des Wrappers */
-    box-sizing: content-box; /* Padding nicht in der Gesamtbreite berücksichtigen */
+    height: 100%;
+    /* Nimmt die volle Höhe des Viewports ein */
+    overflow-y: auto;
+    /* Erlaubt das Scrollen innerhalb des Wrappers */
+    box-sizing: content-box;
+    /* Padding nicht in der Gesamtbreite berücksichtigen */
 }
 
 h1,
@@ -84,9 +88,10 @@ a {
 .main-content {
     position: absolute;
     top: 48%;
-    left: 9%;
+    right: 10%;
+    left: 10%;
     transform: translateY(-50%);
-    padding: 80px;
+    padding: 40px;
     color: #f0f0f0;
 }
 
@@ -111,6 +116,10 @@ a {
     color: #ff2a2a;
 }
 
+.menu-icon {
+    display: none;
+}
+
 .project-button {
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.3);
@@ -122,6 +131,7 @@ a {
     transition: box-shadow 0.15s, color 0.3s, background-color 0.3s ease;
     margin-top: -20px;
 }
+
 
 .project-button i {
     scale: 0.8;
@@ -199,6 +209,67 @@ section {
     animation: fadeInEffect 0.8s ease-in-out forwards;
 }
 
+.close-menu {
+    position: absolute;
+    top: 30px;
+    right: 44px;
+    color: #ff2a2a;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.main-content {
+    transition: filter 0.5s ease;
+}
+
+.overlay-menu.show+.main-content {
+    filter: blur(8px);
+}
+
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+    transition: right 0.5s ease;
+}
+
+.overlay-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 40px;
+}
+
+.overlay-menu ul li {
+    margin: 40px 0;
+}
+
+.overlay-menu ul li a {
+    color: rgb(226, 226, 226);
+    padding-left: 40px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Helvetica', sans-serif;
+    text-decoration: none;
+}
+
+.overlay-menu.show {
+    right: 0;
+}
+
+.container {
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center;
+}
+
 @keyframes fadeInEffect {
     0% {
         opacity: 0;
@@ -206,5 +277,28 @@ section {
 
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul li a {
+        display: none;
+    }
+
+    .menu-icon {
+        scale: 1.9;
+        margin-right: 60px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .icon-section {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .overlay-menu {
+        display: none;
     }
 }

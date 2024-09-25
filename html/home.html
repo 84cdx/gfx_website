@@ -7,57 +7,67 @@
     <title>cdx</title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="../javascript/home.js"></script>
     <script src="https://kit.fontawesome.com/b9431a5d6d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">cdx</div>
-        <ul>
+        <ul class="nav-links" id="navLinks">
             <li><a href="home.html">home</a></li>
             <li><a href="projects.html">projects</a></li>
             <li><a href="about.html">about</a></li>
             <li><a href="contact.html">contact</a></li>
         </ul>
+        <div class="menu-icon" id="menuIcon"><i class="fa-solid fa-bars"></i></div>
     </nav>
-    <div class="content-wrapper">
-        <div class="main-content fade-in">
-            <header>
-                <h1 id="myName">cdx</h1>
-                <h2 id="role">GRAPHIC DESIGNER</h2>
-                <p id="location">BASED IN MUNICH, GERMANY </p>
-            </header>
+    <div id="overlayMenu" class="overlay-menu">
+        <span class="close-menu" id="closeMenu">&#10006;</span>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="main-content fade-in" id="mainContent">
+        <header>
+            <h1 id="myName">cdx</h1>
+            <h2 id="role">GRAPHIC DESIGNER</h2>
+            <p id="location">BASED IN MUNICH, GERMANY </p>
+        </header>
 
-            <section id="about">
-                <p>multidisciplinary freelance graphic designer, blending creativity with expertise across various
-                    mediums
-                    to deliver visually compelling solutions since 2015.</p>
-            </section>
-            <a href="projects.html" class="project-button">view projects
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-        <div class="icon-section">
-            <a href="https://instagram.com/84cdx" target="_blank" rel="noopener noreferrer"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com/84cdx" target="_blank" rel="noopener noreferrer"><i
-                    class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://github.com/84cdx" target="_blank" rel="noopener noreferrer"><i
-                    class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com/in/christian-dietrich-a468001a7" target="_blank" rel="noopener noreferrer"><i
-                    class="fa-brands fa-linkedin"></i></a>
-            <a href="https://open.spotify.com/user/31vqw74tnd5nobpx7ycz46ebrlt4?si=0ce4bfbaadec46a6" target="_blank"
-                rel="noopener noreferrer"><i class="fa-brands fa-spotify"></i></a>
-            <a href="https://letterboxd.com/camodx/" target="_blank" rel="noopener noreferrer"><i
-                    class="fa-brands fa-letterboxd"></i></a>
-        </div>
-        <div id="container"></div>
+        <section id="about">
+            <p>multidisciplinary freelance graphic designer, blending creativity with expertise across various
+                mediums
+                to deliver visually compelling solutions since 2015.</p>
+        </section>
+        <a href="projects.html" class="project-button">view projects
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+    <div class="icon-section">
+        <a href="https://instagram.com/84cdx" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/84cdx" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/84cdx" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/christian-dietrich-a468001a7" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-linkedin"></i></a>
+        <a href="https://open.spotify.com/user/31vqw74tnd5nobpx7ycz46ebrlt4?si=0ce4bfbaadec46a6" target="_blank"
+            rel="noopener noreferrer"><i class="fa-brands fa-spotify"></i></a>
+        <a href="https://letterboxd.com/camodx/" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-letterboxd"></i></a>
+    </div>
+    <div id="container">
         <video id="videoBackground" autoplay muted loop plays-inline class="video">
             <source src="../resources/horror_bw.mp4">
         </video>
     </div>
     </div>
+
+    <script src="../javascript/home.js"></script>
 </body>
 
 </html>
