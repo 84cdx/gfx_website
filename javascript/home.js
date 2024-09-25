@@ -30,10 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
         window.addEventListener("resize", function() {
-            // Überprüfen, ob das Overlay-Menü sichtbar ist
             if (overlayMenu.classList.contains("show")) {
-                toggleMenu(); // Menü und Overlay ausblenden
-                mainContent.style.filter = ""; // Entferne Blur beim Schließen
+                toggleMenu(); 
+                mainContent.style.filter = "";
             }
         });
     }

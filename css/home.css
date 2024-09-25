@@ -11,17 +11,13 @@ body {
 html {
     overflow-x: hidden;
     height: 100%;
-    /* Stellt sicher, dass html die volle Höhe hat */
 }
 
 .content-wrapper {
     overflow-x: hidden;
     height: 100%;
-    /* Nimmt die volle Höhe des Viewports ein */
     overflow-y: auto;
-    /* Erlaubt das Scrollen innerhalb des Wrappers */
     box-sizing: content-box;
-    /* Padding nicht in der Gesamtbreite berücksichtigen */
 }
 
 h1,
@@ -266,7 +262,7 @@ section {
 }
 
 .container {
-    justify-content: center; /* Horizontale Zentrierung */
+    justify-content: center;
     align-items: center;
 }
 
