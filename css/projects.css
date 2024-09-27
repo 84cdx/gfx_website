@@ -57,6 +57,54 @@ a {
     color: #ff2a2a;
 }
 
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.lightbox.show {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox.hide {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 10000;
+    filter: none;
+    box-shadow: 0 0 120px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: red;
+}
+
 .projects-grid {
     gap: clamp(5px, 2vw, 5px);
     max-width: 90vw;

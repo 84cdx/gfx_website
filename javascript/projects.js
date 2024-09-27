@@ -34,3 +34,31 @@ document.getElementById('backToTop').addEventListener('click', function (e) {
         behavior: 'smooth'
     });
 });
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+
+    lightboxImage.src = imageSrc;
+
+    lightbox.style.display = 'flex';
+    setTimeout(() => {
+        lightbox.classList.add('show');
+    }, 10);
+
+    lightbox.addEventListener('click', function (event) {
+        if (event.target !== lightboxImage) {
+            closeLightbox();
+        }
+    });
+}
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+
+    lightbox.classList.remove('show');
+    lightbox.classList.add('hide');
+
+    setTimeout(() => {
+        lightbox.style.display = 'none';
+        lightbox.classList.remove('hide');
+    }, 150);
+}
