@@ -3,11 +3,10 @@ body {
     font-family: 'Helvetica', sans-serif;
     background-color: #000000;
     color: #f0f0f0;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: #e0e0e0;
     text-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
 }
@@ -36,18 +35,18 @@ a {
 }
 
 .logo {
-    font-size: 20px; 
+    font-size: 20px;
     color: #ff2a2a;
     margin-left: 2vw;
-    padding: 0.5vh 1vw; 
+    padding: 0.5vh 1vw;
 }
 
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding-right: 5vw; 
+    padding-right: 5vw;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
     flex-wrap: nowrap;
 }
@@ -67,115 +66,91 @@ a {
 }
 
 .main-content {
-    position: absolute; 
-    top: 48%; 
-    left: 9%; 
-    transform: translateY(-50%); 
+    display: flex;
+    max-width: 700px;
+    flex-direction: column;
+    align-items: center;
     padding: 80px;
     color: #f0f0f0;
+    margin: 0 auto;
 }
-
-.icon-section {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: row; 
-    gap: 25px; 
-}
-
-.icon-section a {
-    font-size: 25px; 
-    color: #f0f0f0;
-    transition: transform 0.3s ease-in-out, color 0.3s;
-}
-
-.icon-section a:hover {
-    transform: scale(1.1);
-    color: #ff2a2a; 
-}
-
-.project-button {
-    display: inline-block; 
-    background-color: rgba(0, 0, 0, 0.3); 
-    color: #ff2a2a; 
-    border: 1px solid #ff2a2a; 
-    padding: 10px 20px;
-    text-decoration: none; 
-    border-radius: 5px; 
-    transition: box-shadow 0.15s, color 0.3s, background-color 0.3s ease; 
-    margin-top: -20px; 
-}
-
-.project-button i {
-    scale: 0.8;
-    margin-left: 5px;
-}
-
-.project-button:hover {
-    color: #000000;
-    box-shadow: 0 0 35px rgba(255, 42, 42, 0.14);
-    background-color: #ff2a2a; 
-}
-
 
 header {
     margin-bottom: 20px;
 }
 
-#about{
-    font-size: 15px;
+#about {
+    max-width: 700px;
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    /* Zentriert den Container horizontal */
+    align-items: center;
+    /* Zentriert den Container vertikal */
+
+    /* Lässt den Container die ganze Höhe der Seite einnehmen */
+    text-align: justify;
+    /* Der Text selbst bleibt linksbündig */
 }
+
 #about p {
-    max-width: 500px; 
-    line-height: 1.6; 
+    max-width: 700px;
+
+    /* Begrenzung der Textbreite */
+    line-height: 1.6;
+    /* Zeilenabstand */
     text-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    /* Entfernt den Standardabstand */
+    padding: 0 20px;
+    /* Fügt etwas Abstand auf der linken und rechten Seite hinzu */
 }
+
+.circle-image {
+    width: 200px;
+    /* Breite des Bildes anpassen */
+    height: 200px;
+    transform: translateX(-8px);
+    /* Höhe des Bildes anpassen */
+    border-radius: 50%;
+    /* Macht das Bild rund */
+    object-fit: cover;
+    /* Schneidet das Bild zu, damit es den gesamten Platz füllt */
+    display: block;
+    margin: 0 auto 60px;
+    /* Zentriert das Bild und fügt unten einen Abstand hinzu */
+}
+
 
 section {
     margin-bottom: 40px;
 }
 
-#myName {
-    font-size: 75px;
-    color: #f0f0f0;
-    margin-bottom: -35px;
+#affil {
+    font-size: 13px;
+    margin-bottom: -10px;
+    margin-top: 20px;
+
 }
 
-#role {
-    font-size: 48.5px;
-    color: #f0f0f0;
-    margin-bottom: 0px;
+.image-gallery {
+    transform: translateX(7px);
+    max-width: 700px;
+    display: flex;
+    /* Flexbox aktivieren */
+    justify-content: center;
+    /* Bilder gleichmäßig verteilen */
+    margin-top: 20px;
+    /* Abstand über der Galerie */
 }
 
-#location {
-    font-size: 20px;
-    color: #ff2a2a;
-    font-weight: bold;
-    text-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-}
-
-#videoBackground {
-    width: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: inherit;
-    z-index: -1;
-    min-width: 100%;
-    min-height: 100%;
-    -webkit-filter: blur(30px);
-    -o-filter: blur(15px);
-    filter: blur(12px) brightness(20%);
-    object-fit: cover;
-    transform: scale(1.06); 
-}
-#container {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
+.image-gallery img {
+    opacity: 0.7;
+    width: 30%;
+    margin: 20px;
+    /* Breite der Bilder */
+    /* Stellt sicher, dass die Bilder den Container ausfüllen */
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -187,19 +162,4 @@ section {
         margin: 0 30px;
     }
 
-    .main-content {
-        padding: 100px 10px;
-    }
-
-    .video {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-aspect-ratio: 16/9) {
-    .video {
-        width: auto;
-        height: 100%;
-    }
 }
