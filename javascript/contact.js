@@ -5,6 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     elements.forEach(function (element) {
         setTimeout(function () {
             element.classList.add('visible');
-        }, 50);
+        }, 20);
     });
 });
