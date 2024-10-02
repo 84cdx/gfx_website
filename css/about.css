@@ -36,7 +36,7 @@ a {
 
 .logo {
     font-size: 20px;
-    color: #ff2a2a;
+    color: #c7222f;
     margin-left: 2vw;
     padding: 0.5vh 1vw;
 }
@@ -62,7 +62,7 @@ a {
 }
 
 .navbar ul li a:hover {
-    color: #ff2a2a;
+    color: #c7222f;
 }
 
 .main-content {
@@ -85,41 +85,26 @@ header {
     margin-bottom: 20px;
     flex-direction: column;
     justify-content: center;
-    /* Zentriert den Container horizontal */
     align-items: center;
-    /* Zentriert den Container vertikal */
-
-    /* Lässt den Container die ganze Höhe der Seite einnehmen */
     text-align: justify;
-    /* Der Text selbst bleibt linksbündig */
 }
 
 #about p {
     max-width: 700px;
-
-    /* Begrenzung der Textbreite */
     line-height: 1.6;
-    /* Zeilenabstand */
     text-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     margin: 0;
-    /* Entfernt den Standardabstand */
     padding: 0 20px;
-    /* Fügt etwas Abstand auf der linken und rechten Seite hinzu */
 }
 
 .circle-image {
     width: 200px;
-    /* Breite des Bildes anpassen */
     height: 200px;
     transform: translateX(-8px);
-    /* Höhe des Bildes anpassen */
     border-radius: 50%;
-    /* Macht das Bild rund */
     object-fit: cover;
-    /* Schneidet das Bild zu, damit es den gesamten Platz füllt */
     display: block;
     margin: 0 auto 60px;
-    /* Zentriert das Bild und fügt unten einen Abstand hinzu */
 }
 
 
@@ -130,7 +115,7 @@ section {
 #affil {
     font-size: 13px;
     margin-bottom: -10px;
-    margin-top: 20px;
+    margin-top: 10px;
 
 }
 
@@ -138,19 +123,14 @@ section {
     transform: translateX(7px);
     max-width: 700px;
     display: flex;
-    /* Flexbox aktivieren */
     justify-content: center;
-    /* Bilder gleichmäßig verteilen */
     margin-top: 20px;
-    /* Abstand über der Galerie */
 }
 
 .image-gallery img {
     opacity: 0.7;
     width: 30%;
     margin: 20px;
-    /* Breite der Bilder */
-    /* Stellt sicher, dass die Bilder den Container ausfüllen */
 }
 
 @media (min-aspect-ratio: 16/9) {

@@ -37,7 +37,7 @@ a {
 
 .logo {
     font-size: 20px; 
-    color: #ff2a2a;
+    color: #c71624;
     margin-left: 2vw;
     padding: 0.5vh 1vw; 
 }
@@ -63,7 +63,7 @@ a {
 }
 
 .navbar ul li a:hover {
-    color: #ff2a2a;
+    color: #c71624;
 }
 
 .main-content {
@@ -93,14 +93,14 @@ a {
 
 .icon-section a:hover {
     transform: scale(1.1);
-    color: #ff2a2a; 
+    color: #c7222f; 
 }
 
 .project-button {
     display: inline-block; 
     background-color: rgba(0, 0, 0, 0.3); 
-    color: #ff2a2a; 
-    border: 1px solid #ff2a2a; 
+    color: #c7222f; 
+    border: 1px solid #c7222f; 
     padding: 10px 20px;
     text-decoration: none; 
     border-radius: 5px; 
@@ -116,7 +116,7 @@ a {
 .project-button:hover {
     color: #000000;
     box-shadow: 0 0 35px rgba(255, 42, 42, 0.14);
-    background-color: #ff2a2a; 
+    background-color: #c7222f; 
 }
 
 
@@ -151,7 +151,7 @@ section {
 
 #location {
     font-size: 20px;
-    color: #ff2a2a;
+    color: #c7222f;
     font-weight: bold;
     text-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
 }
